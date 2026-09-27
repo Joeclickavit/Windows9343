@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=lGQTDXxZ" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.windows93.net/c/sys/boot/splash.html?v=1420196718","20150602171305","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1433265185");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+	<meta charset="UTF-8">
+	<title>BOOTING WINDOWS 93...</title>
+
+
+	<script src="/web/20150602171305js_/http://www.windows93.net/c/sys/boot/codef_core.js"></script> 
+	<script src="/web/20150602171305js_/http://www.windows93.net/c/sys/boot/codef_fx.js"></script> 
+
+	<style type="text/css" media="screen">
+	
+		body{
+			background-color: #000;
+			margin: 0px;
+			padding: 0px;
+			overflow: hidden;
+		}
+
+
+		#loader{
+
+			display:none;
+			position: absolute;
+			width: 126px;
+			height: 15px;
+			background-image: url('https://web.archive.org/web/20150602171305im_/http://www.windows93.net/c/sys/img/progress_bar.gif');
+			position: absolute;
+			top: calc(50% + 100px);
+			left: calc(50% - 63px);
+			
+
+		}
+
+		#main{
+
+			top:0px;
+
+		}
+	</style>
+
+	<script> 
+
+// defaut logo
+//var myimage = new image('https://web.archive.org/web/20150602171305/http://www.windows93.net/c/sys/img/logow.png');
+
+//xmas logo
+var myimage = new image('https://web.archive.org/web/20150602171305/http://www.windows93.net/c/sys/img/logow.png');
+
+
+var mycanvas;
+var myoffscreencanvas;
+var myfx;
+var myfxparam=[
+		{value: 0, amp: 10, inc:0.01, offset: 0},
+		{value: 0, amp: 10, inc:0, offset:  0}
+	      ];
+
+ 
+ 
+function init(){
+	myoffscreencanvas=new canvas(223,185); // i dont specify a div to make it hidden ;)
+	myimage.draw(myoffscreencanvas,0,0); // I draw my logo to my offscreen canvas.
+
+	mycanvas=new canvas(223,window.innerHeight,"main");
+	myfx=new FX(myoffscreencanvas,mycanvas,myfxparam);
+
+
+	go();
+	document.getElementById('loader').style.display = "initial";
+}
+ 
+function go(){
+
+
+	if ( myfxparam[1].inc< 1){
+			myfxparam[1].inc = myfxparam[1].inc + 0.001;
+	}
+
+
+	if ( myfxparam[0].amp< 10) {
+		myfxparam[0].amp = myfxparam[0].amp + 0.1;
+		myfxparam[1].amp = myfxparam[1].amp + 0.1;
+	};
+
+	if ( myfxparam[0].offset> -0.05) {
+		myfxparam[0].offset = myfxparam[0].offset - 0.01;
+		myfxparam[1].offset = myfxparam[1].offset + 0.01;
+	};
+
+
+	mycanvas.fill('#000000');
+	myfx.siny(0,window.innerHeight/2-155);
+	
+	requestAnimFrame( go );
+}
+ 
+</script> 
+</head> 
+<body onload="init();">
+<center>
+	<div id="main"></div>
+
+	<div id="loader"></div>
+</center>	
+</body> 
+</html><!--
+     FILE ARCHIVED ON 17:13:05 Jun 02, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:44:32 Sep 27, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  capture_cache.get: 2.879
+  load_resource: 276.593 (2)
+  PetaboxLoader3.resolve: 138.422 (2)
+  PetaboxLoader3.datanode: 55.844 (2)
+-->
